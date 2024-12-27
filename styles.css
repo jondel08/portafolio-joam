@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212;
+          /* Fondo oscuro */
+          color: #e0e0e0;
+          /* Texto gris claro */
+          line-height: 1.6;
+}
+
+/* Header */
+header {
+          background-color: #1e1e1e;
+          /* Gris oscuro */
+          padding: 20px 0;
+          text-align: center;
+}
+
+header h1 {
+          margin: 0;
+          color: #ffffff;
+          /* Blanco puro */
+          font-size: 3rem;
+}
+
+/* Navigation Menu */
+nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+}
+
+nav ul li {
+          display: inline;
+}
+
+nav ul li a {
+          color: #e0e0e0;
+          text-decoration: none;
+          font-size: 1.1rem;
+          padding: 10px 15px;
+          border-radius: 5px;
+}
+
+nav ul li a:hover {
+          /* background-color: #2a2a2a; */
+          background-color: #00b3e6;
+          /* Hover gris intermedio */
+          /* color: #ffffff; */
+          color: #000000;
+}
+
+/* Section Titles */
+section h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #ffffff;
+          font-size: 2rem;
+}
+
+/* About Section */
+section#about {
+          padding: 30px;
+          background-color: #1a1a1a;
+}
+
+/* Hobbies and Skills */
+section#hobbies-skills {
+          padding: 30px;
+          background-color: #1e1e1e;
+}
+
+/* Education Section */
+section#education {
+          padding: 30px;
+          background-color: #2a2a2a;
+}
+
+/* Programming Experience */
+section#programming-experience {
+          padding: 30px;
+          background-color: #1a1a1a;
+}
+
+.skills-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+}
+
+.skill {
+          text-align: center;
+          background-color: #292929;
+          /* Fondo del ícono */
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+          transition: transform 0.3s ease;
+}
+
+.skill:hover,
+.skill:hover p,
+.skill:hover i {
+          transform: translateY(-15px);
+          background-color: #00b3e6;
+          color: #000000;
+}
+
+.skill i {
+          color: #ffffff;
+          font-size: 3rem;
+          margin-bottom: 10px;
+}
+
+.skill p {
+          margin: 0;
+          color: #e0e0e0;
+}
+
+.skill .fa-brands,
+.skill .fa-solid {
+          font-size: 150px;
+}
+
+/* Contact Form */
+section#contact {
+          padding: 30px;
+          background-color: #1e1e1e;
+}
+
+form {
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: #292929;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+form label {
+          display: block;
+          margin-bottom: 5px;
+          color: #ffffff;
+}
+
+form input,
+form textarea,
+form button {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: none;
+          border-radius: 5px;
+}
+
+form input,
+form textarea {
+          background-color: #1e1e1e;
+          color: #e0e0e0;
+}
+
+form button {
+          background-color: #e0e0e0;
+          color: #000000;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+}
+
+form button:hover {
+          background-color: #ffffff;
+}
+
+/* CV Button */
+.cv-button {
+          text-align: center;
+          margin: 20px 0;
+}
+
+.cv-button a {
+          display: inline-block;
+          background-color: #292929;
+          color: #ffffff;
+          text-decoration: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 1.2rem;
+          transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cv-button a:hover {
+          background-color: #00b3e6;
+          color: #000000;
+}
+
+/* Footer */
+footer {
+          text-align: center;
+          padding: 10px;
+          background-color: #1a1a1a;
+          color: #e0e0e0;
+          font-size: 0.9rem;
+}
+
+#scrollToTopBtn {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: #22d4fd;
+          color: #000000;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          display: none;
+          /* Ocultamos el botón inicialmente */
+}
+
+#scrollToTopBtn:hover {
+          background-color: #00b3e6;
+}
+
+#btn-enviar:hover {
+          background-color: #00b3e6;
+}
