@@ -1,13 +1,12 @@
 // Mostrar el botón cuando el usuario haga scroll hacia abajo
 window.onscroll = function () {
   var btn = document.getElementById("scrollToTopBtn");
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
+  if (window.scrollY > 100) {
     btn.style.display = "block"; // Muestra el botón
+    btn.style.transform = "translateY(0)"; // Aparece de manera fluida
   } else {
-    btn.style.display = "none"; // Oculta el botón cuando está en la parte superior
+    btn.style.transform = "translateY(100px)"; // Se oculta hacia abajo
+    btn.style.display = "none"; // Asegura que desaparezca del flujo
   }
 };
 

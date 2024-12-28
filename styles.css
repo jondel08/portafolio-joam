@@ -221,6 +221,7 @@ footer {
           cursor: pointer;
           display: none;
           /* Ocultamos el botón inicialmente */
+          transition: transform 0.3s ease, display 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
