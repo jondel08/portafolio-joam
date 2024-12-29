@@ -1,4 +1,5 @@
 // Mostrar el botón cuando el usuario haga scroll hacia abajo
+
 window.onscroll = function () {
   var btn = document.getElementById("scrollToTopBtn");
   if (window.scrollY > 100) {
@@ -11,6 +12,7 @@ window.onscroll = function () {
 };
 
 // Función para desplazar hacia arriba cuando se hace clic en el botón
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }

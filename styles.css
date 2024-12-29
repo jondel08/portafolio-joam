@@ -1,3 +1,12 @@
+/* Variables */
+:root {
+          --primary-color: #292929;
+          --secondary-color: #e0e0e0;
+          --hover-color: #ffffff;
+          --font-size-large: 1.5rem;
+          --my-blue: #00b3e6;
+}
+
 /* General Styles */
 body {
           font-family: Arial, sans-serif;
@@ -14,8 +23,9 @@ body {
 header {
           background-color: #1e1e1e;
           /* Gris oscuro */
-          padding: 20px 0;
+          padding: 60px 0 15px 0;
           text-align: center;
+          align-items: center;
 }
 
 header h1 {
@@ -25,11 +35,22 @@ header h1 {
           font-size: 3rem;
 }
 
+h1:hover {
+          color: var(--my-blue);
+}
+
 /* Navigation Menu */
+nav {
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+}
+
 nav ul {
           list-style: none;
           margin: 0;
-          padding: 0;
+          padding: 20px;
           display: flex;
           justify-content: center;
           gap: 15px;
@@ -48,10 +69,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-          /* background-color: #2a2a2a; */
-          background-color: #00b3e6;
-          /* Hover gris intermedio */
-          /* color: #ffffff; */
+          background-color: var(--my-blue);
           color: #000000;
 }
 
@@ -65,26 +83,57 @@ section h2 {
 
 /* About Section */
 section#about {
-          padding: 30px;
+          padding: 10px;
           background-color: #1a1a1a;
 }
 
-/* Hobbies and Skills */
-section#hobbies-skills {
-          padding: 30px;
-          background-color: #1e1e1e;
+section#about:hover h2 {
+          color: var(--my-blue);
 }
 
-/* Education Section */
-section#education {
-          padding: 30px;
-          background-color: #2a2a2a;
+section#about p {
+          margin: 0 200px;
+          padding-bottom: 30px;
 }
 
 /* Programming Experience */
 section#programming-experience {
           padding: 30px;
+          background-color: #2a2a2a;
+}
+
+section#programming-experience:hover h2 {
+          color: var(--my-blue);
+}
+
+/* Education Section */
+section#education {
+          padding: 30px;
           background-color: #1a1a1a;
+}
+
+section#education:hover h2{
+          color: var(--my-blue);
+}
+
+/* Skills */
+section#skills {
+          padding: 30px;
+          background-color: #2e2e2e;
+}
+
+section#skills:hover h2 {
+          color: var(--my-blue);
+}
+
+/* Hobbies */
+section#hobbies {
+          padding: 30px;
+          background-color: #1e1e1e;
+}
+
+section#hobbies:hover h2 {
+          color: var(--my-blue);
 }
 
 .skills-container {
@@ -108,7 +157,7 @@ section#programming-experience {
 .skill:hover p,
 .skill:hover i {
           transform: translateY(-15px);
-          background-color: #00b3e6;
+          background-color: var(--my-blue);
           color: #000000;
 }
 
@@ -131,7 +180,11 @@ section#programming-experience {
 /* Contact Form */
 section#contact {
           padding: 30px;
-          background-color: #1e1e1e;
+          background-color: #2e2e2e;
+}
+
+section#contact:hover h2 {
+          color: var(--my-blue)
 }
 
 form {
@@ -195,7 +248,7 @@ form button:hover {
 }
 
 .cv-button a:hover {
-          background-color: #00b3e6;
+          background-color: var(--my-blue);
           color: #000000;
 }
 
@@ -208,26 +261,32 @@ footer {
           font-size: 0.9rem;
 }
 
+footer:hover {
+          background-color: #1a1a1a;
+          color: var(--my-blue)
+}
+
 #scrollToTopBtn {
           position: fixed;
           bottom: 20px;
           right: 20px;
           padding: 10px 20px;
           font-size: 16px;
-          background-color: #22d4fd;
+          background-color: white;
           color: #000000;
           border: none;
           border-radius: 5px;
           cursor: pointer;
           display: none;
           /* Ocultamos el botón inicialmente */
-          transition: transform 0.3s ease, display 0.3s ease;
+          /* transition: transform 2s ease, display 0.9s ease; */
+          transition: transform 0.5s ease-in-out;
 }
 
 #scrollToTopBtn:hover {
-          background-color: #00b3e6;
+          background-color: var(--my-blue);
 }
 
 #btn-enviar:hover {
-          background-color: #00b3e6;
+          background-color: var(--my-blue);
 }
