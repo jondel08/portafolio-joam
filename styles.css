@@ -23,7 +23,7 @@ body {
 header {
           background-color: #1e1e1e;
           /* Gris oscuro */
-          padding: 60px 0 15px 0;
+          padding: 5px 0 0 0;
           text-align: center;
           align-items: center;
 }
@@ -31,8 +31,22 @@ header {
 header h1 {
           margin: 0;
           color: #ffffff;
-          /* Blanco puro */
           font-size: 3rem;
+}
+
+.header-container {
+          display: flex;
+          align-items: center;
+          gap: 80px;
+          justify-content: center;
+}
+
+.header-image {
+          width: 150px;
+          height: 150px;
+          border-radius: 40%;
+          object-fit: cover;
+          border: 3px solid #ffffff;
 }
 
 h1:hover {
@@ -41,31 +55,37 @@ h1:hover {
 
 /* Navigation Menu */
 nav {
-          padding: 15px;
+          padding: 5px;
           display: flex;
-          align-items: center;
+          /* align-items: center; */
           justify-content: center;
 }
 
 nav ul {
           list-style: none;
           margin: 0;
-          padding: 20px;
+          padding: 5px;
           display: flex;
+          flex-wrap: wrap;
           justify-content: center;
-          gap: 15px;
+          gap: 40px;
 }
 
 nav ul li {
-          display: inline;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1 1 auto;
 }
 
 nav ul li a {
           color: #e0e0e0;
           text-decoration: none;
           font-size: 1.1rem;
-          padding: 10px 15px;
+          padding: 5px 5px;
           border-radius: 5px;
+          text-align: center;
+          white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -83,7 +103,7 @@ section h2 {
 
 /* About Section */
 section#about {
-          padding: 10px;
+          padding: 5px;
           background-color: #1a1a1a;
 }
 
@@ -112,8 +132,28 @@ section#education {
           background-color: #1a1a1a;
 }
 
-section#education:hover h2{
+section#education:hover h2 {
           color: var(--my-blue);
+}
+
+section#education ul {
+          margin: 0 150px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+}
+
+section#education ul li {
+          justify-content: center;
+          align-items: center;
+          flex: 1 1 auto;
+}
+
+section#education ul li span {
+          display: block;
+          margin-top: 5px;
+          font-size: 0.9em;
 }
 
 /* Skills */
@@ -231,13 +271,26 @@ form button:hover {
 }
 
 /* CV Button */
+
+/* Button Container */
+.button-container {
+          display: flex;
+          justify-content: center;
+          /* Centra los botones horizontalmente */
+          align-items: center;
+          /* Alinea verticalmente si es necesario */
+          gap: 150px;
+          /* Espaciado entre los botones */
+          margin: 10px 0;
+}
+
 .cv-button {
           text-align: center;
           margin: 20px 0;
 }
 
 .cv-button a {
-          display: inline-block;
+          /* display: inline-block; */
           background-color: #292929;
           color: #ffffff;
           text-decoration: none;
@@ -279,7 +332,6 @@ footer:hover {
           cursor: pointer;
           display: none;
           /* Ocultamos el botón inicialmente */
-          /* transition: transform 2s ease, display 0.9s ease; */
           transition: transform 0.5s ease-in-out;
 }
 
@@ -289,4 +341,131 @@ footer:hover {
 
 #btn-enviar:hover {
           background-color: var(--my-blue);
+}
+
+/* Cards Education */
+/* Contenedor de las tarjetas */
+#cards-section {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+          padding: 5px;
+}
+
+/* Estilos generales para las tarjetas */
+.card {
+          width: 150px;
+          height: 225px;
+          perspective: 1000px;
+}
+
+.card-inner {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: transform 0.8s ease;
+}
+
+.card:hover .card-inner {
+          transform: rotateY(180deg);
+}
+
+/* Cara frontal y posterior */
+.card-front,
+.card-back {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          backface-visibility: hidden;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Cara frontal */
+.card-front {
+          background-color: #292929;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+}
+
+.card-front img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+}
+
+/* Cara posterior */
+.card-back {
+          background-color: #1a1a1a;
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 5px;
+          transform: rotateY(180deg);
+}
+
+
+
+/* Resposive media */
+
+@media (min-width: 769px) {
+          nav ul li {
+                    flex: 1 1 calc(10% - 10px);
+                    max-width: 200px;
+          }
+}
+
+/* 3 elementos por fila (tabletas) */
+@media (max-width: 768px) and (min-width: 481px) {
+          .header-image {
+                    display: none;
+          }
+
+          nav ul li {
+                    flex: 1 1 calc(33.33% - 30px);
+                    max-width: 250px;
+          }
+
+          section#about p {
+                    margin: 0;
+          }
+
+          .button-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-content: flex-start;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0px;
+          }
+}
+
+/* 2 elementos por fila (teléfonos) */
+@media (max-width: 480px) {
+          .header-image {
+                    display: none;
+          }
+
+          nav ul li {
+                    flex: 1 1 calc(50% - 30px);
+          }
+
+          section#about p {
+                    margin: 0;
+          }
+
+          .button-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-content: flex-start;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0px;
+          }
 }
