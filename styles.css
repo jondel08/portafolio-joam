@@ -44,7 +44,7 @@ header h1 {
 .header-image {
           width: 150px;
           height: 150px;
-          border-radius: 40%;
+          border-radius: 30%;
           object-fit: cover;
           border: 3px solid #ffffff;
 }
@@ -213,7 +213,9 @@ section#hobbies:hover h2 {
 }
 
 .skill .fa-brands,
-.skill .fa-solid {
+.skill .fa-solid,
+.skill .fa-regular
+{
           font-size: 150px;
 }
 
@@ -408,6 +410,33 @@ footer:hover {
           text-align: center;
           padding: 5px;
           transform: rotateY(180deg);
+}
+
+          .whatsapp-button {
+                    position: fixed;
+                    top: 50%;
+                    /* Centra verticalmente */
+                    right: 20px;
+                    /* Mantiene el botón a la derecha */
+                    transform: translateY(-50%);
+                    /* Ajusta el botón para que esté perfectamente centrado */
+                    width: 60px;
+                    height: 60px;
+                    background-color: #25D366;
+                    /* Verde de WhatsApp */
+                    border-radius: 50%;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                    transition: transform 0.3s ease, background-color 0.3s ease;
+
+          }
+
+.whatsapp-button:hover {
+          background-color: #128C7E;
+          transform: scale(1.5);
 }
 
 

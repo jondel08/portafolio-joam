@@ -16,3 +16,10 @@ window.onscroll = function () {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+document
+  .getElementById("btn-enviar")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Evita que se envíe el formulario automáticamente
+    alert("¡El formulario ha sido enviado exitosamente!");
+  });
